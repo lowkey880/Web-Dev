@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Apple Braille", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #6968db;
+    padding: 40px 16px;
+    align-items: center;
+    min-height: 80vh;
+}
+
+main {
+    margin-top: 100px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    min-height: 20vh;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #5843d3;
+}
+
+header {
+    font-weight: bold;
+    font-size: 28px;
+    color: #09086e;
+    text-align: left;
+    padding: 20px 40px ;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #5843d3;
+}
+
+h1 {
+    color: #09086e;
+    font-weight: normal;
+}
+
+form {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#task-input {
+    font-size: 16px;
+    padding: 10px 16px;
+    border: #09086e 1px solid ;
+    border-radius: 8px;
+    width: 100%;
+}
+
+#add-task {
+    font-size: 16px;
+    padding: 10px 16px;
+    background: #09086e;
+    color: white;
+    border: #09086e 1px solid ;
+    border-radius: 8px;
+    width: 80px;
+    cursor: pointer;
+}
+
+#task-input:focus {
+    border :darkblue 1px solid;
+}
+
+#add-task:hover {
+    background: #09086e;
+}
+
+li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+li + li {
+    border-top: none;
+}
+
+li:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+li:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.task-left input {
+    width: 20px;
+    height: 20px;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.task-text {
+    font-size: 17px;
+}
+
+.task-text.done {
+    text-decoration: line-through;
+    color: rgb(155, 54, 54);
+}
+
+.delete-btn {
+    background-color: #ffffff;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
