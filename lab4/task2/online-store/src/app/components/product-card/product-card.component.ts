@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.model';
+import { ProductListComponent } from '../product-list/product-list.component';
 
 @Component({
   selector: 'app-product-card',
@@ -11,17 +12,15 @@ import { Product } from '../../models/product.model';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
-
-  shareToWhatsApp() {
-    const text = `Check out this product: ${this.product.link}`;
-    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
+  
+  likes: number = 0;
+  Like(): void{
+      this.likes++;
   }
 
-  shareToTelegram() {
-    const url = `https://t.me/share/url?url=${encodeURIComponent(
-      this.product.link
-    )}&text=${encodeURIComponent(this.product.name)}`;
-    window.open(url, '_blank');
+  total: number = ProductCardComponent.length;
+
+  Delete(): void{
+    this.total--;
   }
 }

@@ -6,15 +6,19 @@
   <h3>{{ product.name }}</h3>
   <p class="desc">{{ product.description }}</p>
 
+  <!-- html -->
+
   <div class="rating">⭐ {{ product.rating }}</div>
   <div class="price">{{ product.price | number }} ₸</div>
 
   <div class="actions">
-    <a [href]="product.link" target="_blank" class="buy-btn">View on Kaspi</a>
-
+    <p>Instock: {{total}}</p>
     <div class="share-btns">
-      <button type="button" (click)="shareToWhatsApp()" class="share-btn wa">WA</button>
-      <button type="button" (click)="shareToTelegram()" class="share-btn tg">TG</button>
+      <button type="button" (click)="Like()" class="share-btn wa">Like</button>
+      <p> ❤ {{likes}}</p>
     </div>
+      <div class="b2">
+            <button type="button" (click)="Delete()" class="share-btn tg">Delete</button>
+      </div>
   </div>
 </div>
